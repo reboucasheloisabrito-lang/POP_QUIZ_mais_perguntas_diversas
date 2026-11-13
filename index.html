@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="POP QUIZ — teste seus conhecimentos sobre música, filmes e séries.">
+  <title>POP QUIZ — O Desafio das Estrelas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="glow glow-one"></div>
+  <div class="glow glow-two"></div>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="POP QUIZ início"><span class="brand-star">✦</span> POP<span>QUIZ</span></a>
+      <span class="edition">EDIÇÃO CULTURA POP</span>
+    </header>
+
+    <section id="start-screen" class="panel start-screen">
+      <div class="eyebrow"><span class="live-dot"></span> SEU MOMENTO DE BRILHAR</div>
+      <div class="hero-star">✦</div>
+      <h1>POP <span>QUIZ</span></h1>
+      <p class="subtitle">O Desafio das Estrelas</p>
+      <p class="intro">Você acompanha tudo sobre música, filmes e séries? Chegou a hora de provar!</p>
+      <div class="topic-row">
+        <span>♫ Música</span><span>✧ Cinema</span><span>▣ Séries</span>
+      </div>
+      <button id="start-btn" class="primary-btn">COMEÇAR DESAFIO <span>→</span></button>
+      <p class="small-note">10 perguntas • 4 alternativas • 1 campeão</p>
+    </section>
+
+    <section id="loading-screen" class="panel message-screen hidden" aria-live="polite">
+      <div class="loader"></div>
+      <h2>Preparando o tapete vermelho...</h2>
+      <p>Buscando perguntas do universo pop.</p>
+    </section>
+
+    <section id="quiz-screen" class="hidden">
+      <div class="game-top">
+        <div class="round-label">PERGUNTA <strong id="question-number">1</strong><span> / 10</span></div>
+        <div class="score-label">PRÊMIO <strong id="score">0</strong> pts</div>
+      </div>
+      <div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div>
+      <div class="quiz-layout">
+        <aside class="prize-card">
+          <div class="prize-icon">🏆</div>
+          <p class="prize-caption">SUA PONTUAÇÃO</p>
+          <strong id="side-score">0</strong>
+          <div class="prize-divider"></div>
+          <p class="prize-caption">PRÓXIMO NÍVEL</p>
+          <strong id="next-level">100</strong>
+          <p class="prize-foot">Continue brilhando!</p>
+        </aside>
+        <div class="question-card">
+          <div class="category-tag" id="category">CULTURA POP</div>
+          <h2 id="question">Carregando pergunta...</h2>
+          <div id="answers" class="answers"></div>
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+          <button id="next-btn" class="primary-btn next-btn hidden">PRÓXIMA PERGUNTA <span>→</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="result-screen" class="panel message-screen hidden">
+      <div class="result-icon" id="result-icon">🌟</div>
+      <div class="eyebrow">FIM DO DESAFIO</div>
+      <h2 id="result-title">Você brilhou!</h2>
+      <p id="result-message"></p>
+      <div class="final-score"><strong id="final-score">0</strong><span> pontos</span></div>
+      <p id="result-detail" class="small-note"></p>
+      <button id="restart-btn" class="primary-btn">JOGAR NOVAMENTE <span>↻</span></button>
+    </section>
+
+    <footer>POP QUIZ <span>✦</span> Feito para quem vive a cultura pop.</footer>
+  </main>
+</body>
+</html>
